@@ -51,7 +51,7 @@ const updateScore = async () => {
         }
       }
     }
-    return 'hello';
+    return 'updated scores';
   });
 };
 module.exports = { companyService, getCompanyDataServices, updateScore };
