@@ -2,4 +2,4 @@ const getCsvServices = async (req) => {
 
 };
 
-module.exports = getCsvServices;
+module.exports = { getCsvServices };
