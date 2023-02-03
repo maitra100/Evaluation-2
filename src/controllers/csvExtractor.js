@@ -7,18 +7,13 @@ const getCsvController = async (req, res) => {
     const csvStr = response.data;
     const lines = csvStr.split('\n');
     const result = [];
-
-    // NOTE: If your columns contain commas in their values, you'll need
-    // to deal with those before doing the next step
-    // (you might convert them to &&& or something, then covert them back later)
-    // jsfiddle showing the issue https://jsfiddle.net/
     const headers = lines[0].split(',');
-    for (let i = 1; i < lines.length; i++) {
+    for (let index = 1; index < lines.length; index++) {
       const obj = {};
-      const currentline = lines[i].split(',');
+      const currentline = lines[index].split(',');
 
-      for (let j = 0; j < headers.length; j++) {
-        obj[headers[j]] = currentline[j];
+      for (let index2 = 0; index2 < headers.length; index2++) {
+        obj[headers[index2]] = currentline[index2];
       }
 
       result.push(obj);
@@ -27,7 +22,6 @@ const getCsvController = async (req, res) => {
       if (err) {
         console.error(err);
       }
-      // file written successfully
     });
     res.status(201).send('fileCreated');
   } catch (error) {
