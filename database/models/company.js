@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   company.init({
+    idNum: DataTypes.STRING,
     name: DataTypes.STRING,
     ceo: DataTypes.STRING,
     score: DataTypes.INTEGER

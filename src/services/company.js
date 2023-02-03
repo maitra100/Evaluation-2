@@ -19,7 +19,10 @@ const getCompanyDataServices = async () => {
         if (sectors.includes(obj[index].company_sector)) { continue; }
         const companyParams = await axios.get(`http://54.167.46.10/company/${obj[index].company_id}`);
         const details = companyParams.data;
-        const entry = await company.create({ name: details.name, ceo: details.ceo, score: 0 });
+        console.log(details);
+        const entry = await company.create({
+          idNum: details.id, name: details.name, ceo: details.ceo, score: 0,
+        });
       }
     }
   });
@@ -42,7 +45,7 @@ const updateScore = async () => {
           Score = Math.floor(Score);
           const update = await company.update({ score: Score }, {
             where: {
-              id: details[index].companyId,
+              idNum: details[index].companyId,
             },
           });
         }
