@@ -1,8 +1,8 @@
 const express = require('express');
 const getCsvControllers = require('../controllers/csvExtractor');
 
-const route = express().router;
+const route = express.Router();
 
-route.post('/save', getCsvControllers.getCsvController);
+route.post('/', getCsvControllers.getCsvController);
 
 module.exports = route;
