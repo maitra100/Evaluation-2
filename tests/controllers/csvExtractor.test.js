@@ -3,7 +3,7 @@ const csvServices = require('../../src/services/csvExtractor');
 
 describe('Test for checking if csv file is extracted', () => {
   it('should return csv data if end point is correct', async () => {
-    jest.spyOn(csvServices, 'getCsvServices').mockResolvedValue('fileCreated')
+    jest.spyOn(csvServices, 'getCsvServices').mockResolvedValue('fileCreated');
     const mockRes={
         send:jest.fn(),
         status:jest.fn().mockReturnThis()

@@ -68,6 +68,12 @@ const getBySectorSortedService = async (req) => company.findAll({
   ],
 });
 
+const updateCeoService = async (req) => company.update({ ceo: req.ceoName, name: req.name }, {
+  where: {
+    idNum: req.id,
+  },
+});
+
 module.exports = {
-  companyService, getCompanyDataServices, updateScore, getBySectorSortedService,
+  companyService, getCompanyDataServices, updateScore, getBySectorSortedService, updateCeoService,
 };

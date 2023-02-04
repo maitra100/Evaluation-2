@@ -1,5 +1,5 @@
 const {
-  companyService, getCompanyDataServices, updateScore, getBySectorSortedService,
+  companyService, getCompanyDataServices, updateScore, getBySectorSortedService, updateCeoService,
 } = require('../services/company');
 
 const getCompany = async (req, res) => {
@@ -24,6 +24,11 @@ const getBySectorSorted = async (req, res) => {
   res.send(details);
 };
 
+const updateCeo = async (req, res) => {
+  const updateState = await updateCeoService(req.body);
+  res.send('updated');
+};
+
 module.exports = {
-  getCompany, getCompanyData, updateScoreController, getBySectorSorted,
+  getCompany, getCompanyData, updateScoreController, getBySectorSorted, updateCeo,
 };
