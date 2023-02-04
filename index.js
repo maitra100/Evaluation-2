@@ -14,7 +14,7 @@ app.use('/sector', route3);
 // fs.readFile('/Users/soumil_maitra/Desktop/evaluations/evaluation-2/src/utils/csvData.txt', { encoding: 'utf-8' }, (err, data) => {
 //   if (!err) {
 //     const obj = JSON.parse(data);
-//     console.log(obj);
+//     console.log(obj);x
 //   }
 // });
 

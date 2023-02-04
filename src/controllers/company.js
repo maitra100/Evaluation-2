@@ -1,15 +1,16 @@
-const { companyService, getCompanyDataServices, updateScore } = require('../services/company');
+const {
+  companyService, getCompanyDataServices, updateScore, getBySectorSortedService,
+} = require('../services/company');
 
 const getCompany = async (req, res) => {
   const company = await companyService(req.body);
   res.send(company);
 };
 
-const getCompanyData = async (req, res, next) => {
+const getCompanyData = async (req, res) => {
   const data = await getCompanyDataServices();
   // console.log(data);
   res.send(data);
-  next();
 };
 
 const updateScoreController = async (req, res) => {
@@ -18,4 +19,11 @@ const updateScoreController = async (req, res) => {
   res.send(data);
 };
 
-module.exports = { getCompany, getCompanyData, updateScoreController };
+const getBySectorSorted = async (req, res) => {
+  const details = await getBySectorSortedService(req.body);
+  res.send(details);
+};
+
+module.exports = {
+  getCompany, getCompanyData, updateScoreController, getBySectorSorted,
+};

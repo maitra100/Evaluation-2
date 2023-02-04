@@ -19,7 +19,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       score: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
+      },
+      sector: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

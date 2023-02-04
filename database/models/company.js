@@ -17,7 +17,8 @@ module.exports = (sequelize, DataTypes) => {
     idNum: DataTypes.STRING,
     name: DataTypes.STRING,
     ceo: DataTypes.STRING,
-    score: DataTypes.INTEGER
+    score: DataTypes.FLOAT,
+    sector: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'company',
