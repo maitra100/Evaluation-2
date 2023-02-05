@@ -1,8 +1,9 @@
 const express = require('express');
 const getCsvControllers = require('../controllers/csvExtractor');
+const validate = require('../middleware/validator');
 
 const route = express.Router();
 
-route.post('/', getCsvControllers.getCsvController);
+route.post('/', validate.companyValidator, getCsvControllers.getCsvController);
 
 module.exports = route;

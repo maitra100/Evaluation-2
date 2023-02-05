@@ -1,32 +1,49 @@
-const {
-  companyService, getCompanyDataServices, updateScore, getBySectorSortedService, updateCeoService,
-} = require('../services/company');
+const companyService = require('../services/company');
 
 const getCompany = async (req, res) => {
-  const company = await companyService(req.body);
-  res.send(company);
+  try {
+    const company = await companyService.companyService(req.body);
+    if (!company) { throw new Error('not found'); }
+    res.status(200).send(company);
+  } catch (e) {
+    res.status(404).send('not found');
+  }
 };
 
 const getCompanyData = async (req, res) => {
-  const data = await getCompanyDataServices();
-  // console.log(data);
-  res.send(data);
+  try {
+    const msg = await companyService.getCompanyDataServices();
+    if (!msg) { throw new Error('error'); }
+    res.send(msg);
+  } catch (e) {
+    res.send('error');
+  }
 };
 
 const updateScoreController = async (req, res) => {
-  const data = await updateScore();
+  const msg = await companyService.updateScore();
   // console.log(data);
-  res.send(data);
+  res.status(200).send(msg);
 };
 
 const getBySectorSorted = async (req, res) => {
-  const details = await getBySectorSortedService(req.body);
-  res.send(details);
+  try {
+    const details = await companyService.getBySectorSortedService(req.body);
+    if (details.length === 0) { throw new Error('no data found in given sector'); }
+    res.status(200).send(details);
+  } catch (e) {
+    res.status(404).send(e.message);
+  }
 };
 
 const updateCeo = async (req, res) => {
-  const updateState = await updateCeoService(req.body);
-  res.send('updated');
+  try {
+    const updateState = await companyService.updateCeoService(req.body);
+    if (updateState === [0]) { throw new Error('no data updated'); }
+    res.status(200).send('updated');
+  } catch (e) {
+    res.status(404).send(e.message);
+  }
 };
 
 module.exports = {

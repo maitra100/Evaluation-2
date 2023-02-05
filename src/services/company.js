@@ -24,7 +24,7 @@ const getCompanyDataServices = async () => {
           idNum: details.id, name: details.name, ceo: details.ceo, score: 5, sector: obj[index].company_sector,
         });
       }
-    }
+    } else return undefined;
   });
   return 'entered companies in database';
 };
@@ -54,9 +54,9 @@ const updateScore = async () => {
           });
         }
       }
-    }
-    return 'updated scores';
+    } else { return err; }
   });
+  return 'updated scores';
 };
 
 const getBySectorSortedService = async (req) => company.findAll({
