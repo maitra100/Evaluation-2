@@ -3,6 +3,6 @@ const getCompanyBySector = require('../controllers/sector');
 
 const route3 = express.Router();
 
-route3.use('/', getCompanyBySector);
+route3.post('/', getCompanyBySector);
 
 module.exports = route3;
