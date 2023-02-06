@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675623642308" clover="3.2.0">
-  <project timestamp="1675623642308" name="All files">
-    <metrics statements="158" coveredstatements="121" conditionals="40" coveredconditionals="25" methods="23" coveredmethods="20" elements="221" coveredelements="166" complexity="0" loc="158" ncloc="158" packages="4" files="9" classes="9"/>
+<coverage generated="1675658151466" clover="3.2.0">
+  <project timestamp="1675658151466" name="All files">
+    <metrics statements="158" coveredstatements="120" conditionals="40" coveredconditionals="24" methods="23" coveredmethods="20" elements="221" coveredelements="164" complexity="0" loc="158" ncloc="158" packages="4" files="9" classes="9"/>
     <package name="database.models">
       <metrics statements="25" coveredstatements="24" conditionals="10" coveredconditionals="7" methods="5" coveredmethods="5"/>
       <file name="company.js" path="/Users/soumil_maitra/Desktop/evaluations/evaluation-2/database/models/company.js">
@@ -37,9 +37,9 @@
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="59" coveredstatements="51" conditionals="12" coveredconditionals="9" methods="8" coveredmethods="7"/>
+      <metrics statements="59" coveredstatements="52" conditionals="12" coveredconditionals="10" methods="8" coveredmethods="7"/>
       <file name="company.js" path="/Users/soumil_maitra/Desktop/evaluations/evaluation-2/src/controllers/company.js">
-        <metrics statements="29" coveredstatements="28" conditionals="8" coveredconditionals="7" methods="5" coveredmethods="5"/>
+        <metrics statements="29" coveredstatements="29" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
@@ -65,9 +65,9 @@
         <line num="39" count="1" type="stmt"/>
         <line num="40" count="2" type="stmt"/>
         <line num="41" count="2" type="stmt"/>
-        <line num="42" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="43" count="2" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
+        <line num="42" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
         <line num="49" count="1" type="stmt"/>
       </file>
       <file name="csvExtractor.js" path="/Users/soumil_maitra/Desktop/evaluations/evaluation-2/src/controllers/csvExtractor.js">
@@ -108,28 +108,28 @@
       </file>
     </package>
     <package name="src.middleware">
-      <metrics statements="20" coveredstatements="19" conditionals="10" coveredconditionals="9" methods="1" coveredmethods="1"/>
+      <metrics statements="20" coveredstatements="17" conditionals="10" coveredconditionals="7" methods="1" coveredmethods="1"/>
       <file name="validator.js" path="/Users/soumil_maitra/Desktop/evaluations/evaluation-2/src/middleware/validator.js">
-        <metrics statements="20" coveredstatements="19" conditionals="10" coveredconditionals="9" methods="1" coveredmethods="1"/>
+        <metrics statements="20" coveredstatements="17" conditionals="10" coveredconditionals="7" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="18" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="21" count="2" type="stmt"/>
+        <line num="18" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="21" count="1" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
-        <line num="26" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="28" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="cond" truecount="1" falsecount="1"/>
         <line num="29" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="35" count="2" type="stmt"/>
-        <line num="36" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="cond" truecount="1" falsecount="1"/>
         <line num="37" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
         <line num="45" count="1" type="stmt"/>
       </file>
     </package>

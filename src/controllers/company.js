@@ -39,7 +39,7 @@ const getBySectorSorted = async (req, res) => {
 const updateCeo = async (req, res) => {
   try {
     const updateState = await companyService.updateCeoService(req.body);
-    if (updateState === [0]) { throw new Error('no data updated'); }
+    if (!updateState) { throw new Error('no data updated'); }
     res.status(200).send('updated');
   } catch (e) {
     res.status(404).send(e.message);

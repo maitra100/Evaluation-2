@@ -114,7 +114,7 @@ describe('tests for company data manipulation', () => {
         send: jest.fn(),
         status: jest.fn().mockReturnThis(),
       };
-      jest.spyOn(companyService, 'updateCeoService').mockResolvedValue([0]);
+      jest.spyOn(companyService, 'updateCeoService').mockResolvedValue(undefined);
       await companyController.updateCeo({
         body: {
           sector: 'sector',
